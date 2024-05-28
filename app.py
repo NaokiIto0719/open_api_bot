@@ -36,6 +36,14 @@ st.write("---")
 st.write("### プロンプト")
 st.write(st.secrets.AppSettings.chatbot_setting)
 st.write("---")
+st.write('[{"role": "system", "content": st.secrets.AppSettings.chatbot_setting}]')
+st.write('{"role": "user", "content": st.session_state["user_input"]}')
+st.write('    response = openai.ChatCompletion.create(' + 
+        'model="gpt-3.5-turbo",' +
+        'messages=messages' +
+    ')')
+
+st.write("---")
 
 user_input = st.text_input("メッセージを入力してください。", key="user_input", on_change=communicate)
 
