@@ -33,8 +33,6 @@ def communicate():
 st.title("My AI Assistant")
 st.write("ChatGPT APIを使ったチャットボットです。")
 st.write("---")
-st.write("# プロンプト")
-st.write("## プロンプト")
 st.write("### プロンプト")
 st.write(st.secrets.AppSettings.chatbot_setting)
 st.write("---")
